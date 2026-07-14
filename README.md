@@ -37,9 +37,9 @@ developer account and a test portal in a couple of minutes — no cost, no credi
 
 ### Install and run
 
-This project will be published to PyPI as the distribution `hubspot-mcp`; its console
+This project is published to PyPI as the distribution `hubspot-mcp`; its console
 script is named `hubspot-mcp-server` (a different, unrelated package already holds the
-`hubspot-mcp-server` PyPI name). Because of that mismatch, once published you must tell
+`hubspot-mcp-server` PyPI name). Because of that mismatch, you must tell
 `uvx` which distribution to pull the script from — `uvx hubspot-mcp-server` alone would
 fetch the *wrong* package:
 
@@ -47,10 +47,6 @@ fetch the *wrong* package:
 
 That starts the server over stdio. In practice you'll point an MCP client at it
 instead of running it directly — for Claude Code:
-
-**Note:** `hubspot-mcp` is not yet published to PyPI either, so `--from hubspot-mcp`
-below won't resolve. Until it's published, replace it with the from-source form
-`uvx --from git+https://github.com/inogen-ai/hubspot-mcp-server hubspot-mcp-server`.
 
     claude mcp add hubspot \
       -e HUBSPOT_MCP_ACCESS_TOKEN=<your-private-app-token> \
